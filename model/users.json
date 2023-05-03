@@ -1,0 +1,23 @@
+[
+	{
+		"username": "Siti_NA",
+		"roles": { "User": 1153, "Editor": 3017 },
+		"password": "$2b$10$mZ3A585oxxkc8cdJ79eEpOBu0DL1FOrma4Fn7PQXGQXXEFN0G4pt.",
+		"rawPassword": "siti2023",
+		"refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNpdGlfTkEiLCJpYXQiOjE2ODMwMDQwMTksImV4cCI6MTY4MzA5MDQxOX0.eqtdpfzFY46LQBSGvbjnvXENAfuVl_ef71VrkK4I_TE"
+	},
+	{
+		"username": "Luki_Subandi",
+		"roles": { "User": 1153 },
+		"password": "$2b$10$Z2xYEviQBFs7YvDO5dbsNecr1VjBWC0VwFRVIjS1/PfBSRDsYtVSy",
+		"rawPassword": "Subandi2023",
+		"refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikx1a2lfU3ViYW5kaSIsImlhdCI6MTY4MzAwNDEyMCwiZXhwIjoxNjgzMDkwNTIwfQ.YqdnWc8aSlFQyncDcgL8L4AMWS3XvpHp8POW-K67mnw"
+	},
+	{
+		"username": "G_Subandi",
+		"roles": { "User": 1153, "Editor": 3017, "Admin": 4031 },
+		"password": "$2b$10$Z2xYEviQBFs7YvDO5dbsNecr1VjBWC0VwFRVIjS1/PfBSRDsYtVSy",
+		"rawPassword": "Subandi2023",
+		"refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkdfU3ViYW5kaSIsImlhdCI6MTY4MzAwNDEzOCwiZXhwIjoxNjgzMDkwNTM4fQ.i5048sTPGNkqbMk201x2ZInIBK-pA7I6UeOZg6M1IMQ"
+	}
+]
