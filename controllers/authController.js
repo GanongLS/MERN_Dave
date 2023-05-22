@@ -6,39 +6,41 @@ const handleLogin = async (req, res) => {
 	const { username, password } = req.body;
 	if (!username || !password) {
 		return res.status(400).json({
-			"message": "Username and password are required.",
+			message: "Username and password are required.",
 		});
 	}
 
 	// check for user
 	try {
 		const foundUser = await User.findOne({ username }).exec();
+		console.log({ foundUser });
 		if (!foundUser) {
 			return res.status(401).json({
-				"error": true,
-				"message": `user ${username} tidak ditemukan`,
+				error: true,
+				message: `user ${username} tidak ditemukan`,
 			});
 		} // unathourized
 		const passwordMatch = await bcrypt.compare(password, foundUser.password);
 		if (passwordMatch) {
 			// finding roles
-			const roles = Object.values(foundUser.roles);
+			const roles = Object.values(foundUser.roles).filter(v => v);
+			console.log({ roles });
 			// create JWT (JSON Web Token)
 			const accessToken = jwt.sign(
 				{
 					userInfo: {
-						"username": foundUser.username,
+						username: foundUser.username,
 						roles,
 					},
 				},
 				process.env.ACCESS_TOKEN_SECRET,
 				{
-					expiresIn: "10m",
+					expiresIn: "10s",
 				}
 			);
 			const refreshToken = jwt.sign(
 				{
-					"username": foundUser.username,
+					username: foundUser.username,
 				},
 				process.env.REFRESH_TOKEN_SECRET,
 				{
@@ -50,23 +52,24 @@ const handleLogin = async (req, res) => {
 			await foundUser.save();
 			res.cookie("jwt", refreshToken, {
 				httpOnly: true,
-				sameSite: "none",
-				// secure: true, // di take out dulu, karena ga bisa jalan di thunder client.
+				sameSite: "None",
+				secure: true, // di take out dulu, karena ga bisa jalan di thunder client. kalau mau prod dinyalakan.
 				maxAge: 24 * 60 * 60 * 1000,
 			});
 			return res.status(200).json({
 				error: false,
 				message: `user ${username} berhasil login.`,
 				accessToken,
+				roles,
 			});
 		} else {
 			return res.status(401).json({
-				"error": true,
-				"message": `wrong password`,
+				error: true,
+				message: `wrong password`,
 			});
 		}
 	} catch (error) {
-		return res.status(500).json({ "message": error.message });
+		return res.status(500).json({ message: error.message });
 	}
 };
 

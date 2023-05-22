@@ -17,12 +17,12 @@ const PORT = process.env.PORT || 3300;
 // connect to DB, if error we don't need to connect to other middleware, server without DB is nothing.
 connectDB();
 
-// const byte = require("crypto").randomBytes(64).toString("hex");
-// console.log({ byte }); untuk menggenerate untuk env. contoh aja. .
+
 // custom middleware logger
 app.use(logger);
 
 // Access-Control-Allow-Credentials
+// allowed origin.
 app.use(credentials);
 
 // Cross Origin Resource Sharing.

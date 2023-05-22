@@ -18,3 +18,6 @@ I suggest completing my [8 hour JavaScript course tutorial video](https://youtu.
 ### Academic Honesty
 
 **DO NOT COPY FOR AN ASSIGNMENT** - Avoid plagiargism and adhere to the spirit of this [Academic Honesty Policy](https://www.freecodecamp.org/news/academic-honesty-policy/).# MERN_Dave
+
+<!-- // const byte = require("crypto").randomBytes(64).toString("hex");
+// console.log({ byte }); untuk menggenerate untuk env. contoh aja. . -->

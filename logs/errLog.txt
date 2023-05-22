@@ -3,3 +3,5 @@
 2023/05-01	07:52:28	4efed2a9-e2bd-424d-bd8f-773b9952d38c	TypeError: Cannot read properties of undefined (reading 'authorization')
 2023/05-01	07:54:28	91f1a38a-6f31-4f90-a926-6e3c7b8fbf31	TypeError: Cannot read properties of undefined (reading 'authorization')
 2023/05-01	07:54:41	f7f0f63c-25c4-493c-a1c3-b49d49299955	TypeError: Cannot read properties of undefined (reading 'authorization')
+2023/05-20	02:08:05	67375c54-6c62-4e9f-acc0-f1589a9acee7	Error: Not allowed by CORS
+2023/05-20	02:09:19	c4a399ed-e038-4662-8769-f47ffb59ff2a	Error: Not allowed by CORS
